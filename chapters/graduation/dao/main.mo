@@ -68,7 +68,7 @@ actor {
                         name = member.name;
                         role = #Student;
                 };
-                let mbtCanister = actor("v4w3l-lyaaa-aaaab-qadma-cai") : actor {
+                let mbtCanister = actor("2iql3-oiaaa-aaaab-qacja-cai") : actor {
                         mint : shared (owner : Principal, amount : Nat) -> async Result<(), Text>;
                 };
                 let result = await mbtCanister.mint(caller, 10);
@@ -147,7 +147,7 @@ actor {
                                 return #err("The caller is not a member - cannot create a proposal");
                         };
                         case (?member) {
-                                let mbtCanister = actor("v4w3l-lyaaa-aaaab-qadma-cai") : actor {
+                                let mbtCanister = actor("2iql3-oiaaa-aaaab-qacja-cai") : actor {
                                         balanceOf : shared (owner : Principal) -> async Nat;
                                         burn : shared (owner : Principal, amount : Nat) -> async Result<(), Text>;
                                 };
@@ -216,7 +216,7 @@ actor {
                                                 return #err("The proposal does not exist");
                                         };
                                         case (?proposal) {
-                                                let mbtCanister = actor("v4w3l-lyaaa-aaaab-qadma-cai") : actor {
+                                                let mbtCanister = actor("2iql3-oiaaa-aaaab-qacja-cai") : actor {
                                                         balanceOf : shared (owner : Principal) -> async Nat;
                                                 };
 
