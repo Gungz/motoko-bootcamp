@@ -63,8 +63,8 @@ The course is organized into 7 distinct sections, comprising 5 main chapters, a 
 | [Chapter 2](./chapters/chapter_2/challenge/main.mo)         | Create your tribe          | Learn about the power of the collective and how to build a community.                                           |
 | [Chapter 3](./chapters/chapter_3/challenge/main.mo)         | Making money               | Create and manage a token                                                                                       |
 | [Chapter 4](./chapters/chapter_4/challenge/main.mo)         | Listen to your community   | Implement a voting system and a proposal mechanism and learn about the power of governance and decision-making. |
-| [Chapter 5](./src/chapters/chapter_5/challenge/main.mo)     | Build your brand           | Build a webpage and develop a branding for your dApp                                                            |
-| [Graduation](./src/chapters/graduation)                     | Graduation                 | Have you followed the course? It's time to graduate and submit your final project.                              |     |
+| [Chapter 5](./chapters/chapter_5/challenge/main.mo)     | Build your brand           | Build a webpage and develop a branding for your dApp                                                            |
+| [Graduation](./chapters/graduation)                     | Graduation                 | Have you followed the course? It's time to graduate and submit your final project.                              |     |
 
 Access the course [here](https://nnri3-7qaaa-aaaaj-qa3qa-cai.icp0.io/index.html)
 

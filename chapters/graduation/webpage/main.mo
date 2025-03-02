@@ -1,6 +1,7 @@
 import Types "types";
 import Result "mo:base/Result";
 import Text "mo:base/Text";
+import Principal "mo:base/Principal";
 actor Webpage {
 
     type Result<A, B> = Result.Result<A, B>;
@@ -13,15 +14,19 @@ actor Webpage {
     // The webpage displays the manifesto
     public query func http_request(request : HttpRequest) : async HttpResponse {
         return ({
-            status_code = 404;
-            headers = [];
-            body = Text.encodeUtf8("Hello world!");
+            headers = [("Content-Type", "text/html; charset=UTF-8")];
+            status_code = 200 : Nat16;
+            body = Text.encodeUtf8(manifesto);
             streaming_strategy = null;
         });
     };
 
     // This function should only be callable by the DAO canister (no one else should be able to change the manifesto)
     public shared ({ caller }) func setManifesto(newManifesto : Text) : async Result<(), Text> {
-        return #err("Not implemented");
+        if (caller == Principal.fromText("66ete-hqaaa-aaaab-qacrq-cai")) {
+            manifesto := newManifesto;
+            return #ok();
+        };
+        return #err("Only dao can update the manifesto");
     };
 };
